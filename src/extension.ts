@@ -20,6 +20,18 @@ export function activate(context: vscode.ExtensionContext) {
     .update('extensions.autoCheckUpdates', false, vscode.ConfigurationTarget.Global);
 	vscode.workspace.getConfiguration()
     .update('extensions.autoUpdate', false, vscode.ConfigurationTarget.Global);
+	vscode.workspace.getConfiguration()
+    .update('security.workspace.trust.enabled', false, vscode.ConfigurationTarget.Global);
+	vscode.workspace.getConfiguration()
+    .update('terminal.integrated.defaultLocation', 'view', vscode.ConfigurationTarget.Global);	
+	vscode.workspace.getConfiguration()
+    .update('terminal.integrated.tabs.enabled', true, vscode.ConfigurationTarget.Global);	
+	vscode.workspace.getConfiguration()
+    .update('terminal.integrated.shellIntegration.enabled', true, vscode.ConfigurationTarget.Global);	
+	vscode.workspace.getConfiguration()
+    .update('security.workspace.trust.banner', 'never', vscode.ConfigurationTarget.Global);	
+	vscode.workspace.getConfiguration()
+    .update('security.workspace.trust.startupPrompt', 'never', vscode.ConfigurationTarget.Global);		
 }
 
 // this method is called when your extension is deactivated
